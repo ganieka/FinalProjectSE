@@ -1,0 +1,26 @@
+#Program Kanban Board
+
+READ AND WRITE "BACKLOG", "DEVELOP", "TEST", "DEPLOY", "DONE" WITH ARRAY
+READ AND WRITE "NOTE" WITH NUMBER
+
+FUNCTION StoreArray(Arr)
+    PRINT "Jumlah note yang ingin disimpan di Arr: "
+    STORE "NOTE" WITH USER INPUT
+
+    WHILE "NOTE" MORE THAN 0
+        DO STORE Arr WITH USER INPUT
+        DO REDUCE "NOTE" BY 1
+    END WHILE
+END FUNCTION
+
+StoreArray(BACKLOG)
+StoreArray(DEVELOP)
+StoreArray(TEST)
+StoreArray(DEPLOY)
+StoreArray(DONE)
+
+PRINT "BACKLOG"
+PRINT "DEVELOP"
+PRINT "TEST"
+PRINT "DEPLOY"
+PRINT "DONE"
